@@ -38,7 +38,7 @@ class B{
 		//equals를 사용하여 no를 비교하고 싶을 때 (오버라이딩!)
 //		boolean equal = ( this.no == ( (B)obj ).no );
 //		return equal;
-		return this.no == ( (B) obj ).no;
+		return this.no == ( (B) obj ).no; 
 	}
 	
 	//Object.class안의 원래 equals 메소드

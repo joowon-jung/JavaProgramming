@@ -16,7 +16,7 @@ public class CalendarTest{ //달력
 	///Main method
 	public static void main(String args[])	{
 		
-		// ==>1. 객체생성 할 수 없다면 Calendar.class는 어떻게 사용할 것인가.. (static Method 활용)
+		// ==>1. 추상클래스 Calendar.class는 객체 생성 할 수 없는데 어떻게 사용할 것인가.. (static Method 활용)
 
 		//Calendar cld = new Calendar(); // Calendar.class는 abstract class 이기 때문에 인스턴스 생성 불가
 		Calendar cld = Calendar.getInstance(); // Calendar.class 안의 getInstance() 는 static Method
@@ -29,6 +29,8 @@ public class CalendarTest{ //달력
 		// 오버라이딩 하기 전 toString() 메소드는 Object.class에 있음
 		
 		// ModifierTest01~04 참고 *
+		// ModifierTest04 에서는 private 생성자를 써서 생성 못하게 막았으니 static 메소드를 사용해서 받아왔음.
+		// 여기서는 abstract 클래스를 써서 인스턴스 생성 못하니 static 메소드를 사용해서 받아왔음. static 메소드의 활용 !
 		
 		//==> 2. 다름 방법은... ( Generalization / ~ is a ~ / 묵시적 형변환 / Hierarchy 이해..)
 //		Calendar cld = new GregorianCalendar();
@@ -64,7 +66,8 @@ public class CalendarTest{ //달력
 		
 		int i = 100;
 		Integer integer = new Integer(i);  
-		System.out.println(" 1 : "+integer.toString()); //toString() 안 써도 상관없음
+		System.out.println(" 1 : "+integer.toString()); //toString() 안 써도 상관없음 
+														//Integer.class 안에서 오버라이딩 된 toString()
 		System.out.println(" 2 : "+integer.intValue());
 		System.out.println(" 3 : "+integer.doubleValue());
 	}//end of main

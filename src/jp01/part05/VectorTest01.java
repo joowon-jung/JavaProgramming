@@ -20,7 +20,7 @@ public class VectorTest01 {
 		String s1 = new String("1.홍");
 		vector.add(s1);
 		vector.add(new String("2.동"));
-		vector.add("3. 님 안녕하세요"); //스트링은 new 키워드 없이도 가능
+		vector.add("3. 님 안녕하세요"); //String은 new 키워드 없이도 가능
 		
 		//Vector 저장된 값을 출력 :: vector.capacity() 무엇을 return 하는가.. (10을 리턴)
 		for (int i = 0; i < vector.size(); i++) { //vector.size() : 3

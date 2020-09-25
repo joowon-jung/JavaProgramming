@@ -3,7 +3,7 @@ package jp01.part07;
  
   	Generic :: jdk 1.5 추가 기능
   	- Vector 생성시 관리할 DataType 을 미리 선언 가능
-  	- Data 추출 시 관리할 DataType 이 결정되어 있으니 명시적 형변환이 필요.
+  	- Data 추출 시 관리할 DataType 이 결정되어 있으니 명시적 형변환이 불필요.
  */
 
 import java.util.*;

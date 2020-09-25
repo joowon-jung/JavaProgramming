@@ -27,7 +27,7 @@ public class ArrayListTest03 {
 		//ArrayList 저장된 값을 출력
 		for (int i = 0; i < arrayList.size(); i++) {
 			//Generic 사용으로 명시적 형변환 불필요
-			System.out.println(arrayList.get(i));
+			System.out.print(arrayList.get(i));
 		}
 		
 		System.out.println("\n JDK 1.5 추가기능 :: Generic, Enhanced For Loop 사용");
@@ -38,7 +38,7 @@ public class ArrayListTest03 {
 		}
 		
 		System.out.println("\n ==> API 확인");
-		arrayList.add("4.길"); //add() 가 오버로딩 되어있음
+		arrayList.add(1, "4.길"); //add() 가 오버로딩 되어있음
 		for(int i = 0; i < arrayList.size(); i++) {
 			System.out.print(arrayList.get(i));
 		}
@@ -52,7 +52,7 @@ public class ArrayListTest03 {
 		System.out.println("\n ==> API 확인");
 		arrayList.remove(3);
 		for(int i = 0; i < arrayList.size(); i++) {
-			System.out.println(arrayList.get(i));
+			System.out.print(arrayList.get(i));
 		}
 	}
 }

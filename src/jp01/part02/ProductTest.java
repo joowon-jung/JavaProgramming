@@ -1,7 +1,7 @@
 package jp01.part02;
 
 /*	
-	FieldName :  ProductTest.java  
+	FileName :  ProductTest.java  
 	
 	  1. Reference Data Type 의미 다시 확인
 	  2. 실행결과를 에측하고,  실행하여 예측한 결과와 맞는지 확인 

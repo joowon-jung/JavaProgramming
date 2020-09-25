@@ -22,8 +22,8 @@ public class StringTest03 {
 		System.out.println(s2);
 
 		int a = name.indexOf("ABC"); //indexOf : 주어진 문자가 문자열에 존재하는지 확인하여 위치를 알려줌
-		System.out.println(a);
-		System.out.println(name.substring(a)); //3
+		System.out.println(a); //3
+		System.out.println(name.substring(a)); 
 
 		int b = name.indexOf("ABC");
 		System.out.println(b); //3
