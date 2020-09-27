@@ -16,7 +16,7 @@ public class A{
   
   ///Field
   
-	///Constructor
+  ///Constructor
   public A(){
 	  super(); //모든 생성자 첫 라인에는 super()가 생략되어 있다!
 	  		   //java.lang.Object를 extends 받고 있기 때문에
