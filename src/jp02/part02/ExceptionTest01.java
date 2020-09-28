@@ -6,7 +6,7 @@ package jp02.part02;
  */
 public class ExceptionTest01 {
 	
-	///Field
+	///Field- information hiding
 	private int sum;
 	private int avg;
 	
@@ -35,15 +35,15 @@ public class ExceptionTest01 {
 	///main method
 	public static void main(String[] args) {
 		
-		int i = Integer.parseInt(args[0]);
-		int j = Integer.parseInt(args[1]);
-		int k = Integer.parseInt(args[2]);
+		int i = Integer.parseInt(args[0]); //10
+		int j = Integer.parseInt(args[1]); //20
+		int k = Integer.parseInt(args[2]); //0
 		
 		ExceptionTest01 et = new ExceptionTest01();
 		et.sum(i, j);
-		et.avg(k);
+		et.avg(k); // 실행해야 하는데 avg() 안의 avg = sum / z; 에서 문제가 발생
 		
-		System.out.println("main Method End...");
+		System.out.println("main Method End..."); // 출력 안 됨. 프로그램이 정상적으로 종료되지 않았음 
 	}
 
 }

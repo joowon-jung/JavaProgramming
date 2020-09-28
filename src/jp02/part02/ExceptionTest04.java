@@ -54,7 +54,8 @@ public class ExceptionTest04 {
 		try {
 			et.avg(k);
 		} catch (ArithmeticException e) { // 현재라인을 주석처리하고 아래를 주석을 풀고 실행하면..
-			// }catch(Exception e){ // Exception e = new ArithmeticException() 은 가능한가?
+			// }catch(Exception e){ // Exception e = new ArithmeticException() 은 가능한가? 가능
+			                                      // 아버지 대신 내가 갈 수 있음. is - a 관계
 			System.out.println("1. >> ==========================");
 			System.out.println("et.avg(k)에서 Exception 이 발생한 모양");
 			System.out.println("2. >> ==========================");

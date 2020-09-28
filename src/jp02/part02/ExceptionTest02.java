@@ -37,8 +37,9 @@ public class ExceptionTest02 {
 			System.out.println("z값이 0인 모양 입니다. 나누기 불가");
 			System.out.println("2. >> ==========================");
 			System.out.println(e); //System.out.println(e.toString());
+			// 쓰레기값이 찍히지 않았으니까 오버라이딩 된 것임을 알 수 있다!
 			System.out.println("3. >> ==========================");
-			e.printStackTrace();
+			e.printStackTrace(); // 꼭 찍어주는 습관 들이기. Stack 구조로 따라가면서 어디서 문제 발생했는지 알려준다!
 			System.out.println("4. >> ==========================");
 			
 		}
@@ -49,9 +50,9 @@ public class ExceptionTest02 {
 	///main method
 	public static void main(String[] args) {
 		
-		int i = Integer.parseInt(args[0]);
-		int j = Integer.parseInt(args[1]);
-		int k = Integer.parseInt(args[2]);
+		int i = Integer.parseInt(args[0]); //10
+		int j = Integer.parseInt(args[1]); //20
+		int k = Integer.parseInt(args[2]); //0
 		
 		ExceptionTest02 et = new ExceptionTest02();
 		et.sum(i, j);

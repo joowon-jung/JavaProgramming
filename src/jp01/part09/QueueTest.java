@@ -21,7 +21,7 @@ public class QueueTest {
 		queue.offer(new String("2 : 이순신"));
 		queue.offer("3 : 주몽");
 		
-		String str1 = (String)queue.poll();
+		String str1 = (String)queue.poll(); //String 안 해줘도 됨
 		System.out.println(str1);
 		
 		String str2 = (String)queue.peek(); //==> poll(), peek() 차이점은...

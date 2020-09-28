@@ -21,7 +21,7 @@ public class MapTest {
 		
 		map.put("이순신", "수군 대장군");
 		map.put("주몽", "고구려시조");
-		
+		                                           
 		String value01 = map.get("주몽");
 		System.out.println("주몽 설명 : " + value01);
 		

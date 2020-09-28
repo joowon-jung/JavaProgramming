@@ -25,7 +25,7 @@ public class SetTest {
 		isAddOk = hs.add("B");
 		System.out.println("저장유무 : " + isAddOk);
 		
-		isAddOk = hs.add("B");
+		isAddOk = hs.add("B"); // set은 중복 불가
 		System.out.println("저장유무 : " + isAddOk);
 		
 		System.out.println("저장된 data 갯수 : " + hs.size());

@@ -1,6 +1,7 @@
 package jp01.part09;
 
 import java.util.Stack;
+import java.util.*;
 
 /*
  * :: java.util.Stack (Last In First Out)
@@ -13,6 +14,7 @@ public class StackTest {
 	public static void main(String[] args) {
 
 		Stack<String> stack = new Stack<String>();
+		// List<String> stack = new Stack<String>(); => 인덱스를 Stack 구조로 관리하겠다는 얘기
 
 		String value = new String("1 : 홍길동");
 		stack.push(value);

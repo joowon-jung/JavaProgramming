@@ -40,9 +40,9 @@ public class ExceptionTest03 {
 	///main method
 	public static void main(String[] args) {
 		
-		int i = Integer.parseInt(args[0]);
-		int j = Integer.parseInt(args[1]);
-		int k = Integer.parseInt(args[2]);
+		int i = Integer.parseInt(args[0]); //10
+		int j = Integer.parseInt(args[1]); //20
+		int k = Integer.parseInt(args[2]); //0
 		
 		ExceptionTest03 et = new ExceptionTest03();
 
