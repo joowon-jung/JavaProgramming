@@ -66,18 +66,18 @@ public class AutoBoxingUnBoxingTest{
 	
 	//==>jdk1.4의 경우
 	public void addArrayList14(int intValue){
-		ArrayList arryList = new ArrayList();
-		arryList.add(new Integer(intValue));
-		Integer i = (Integer)arryList.get(0);
-		System.out.println(i.intValue());
+		ArrayList arryList = new ArrayList(); // arrayList 객체 생성
+		arryList.add(new Integer(intValue));  // arrayList 안에 Integer타입 추가
+		Integer i = (Integer)arryList.get(0); // arrayList 안의 Integer를 꺼내기 위해 (Integer)로 명시적 형변환
+		System.out.println(i.intValue());     // Integer 타입의 값을 꺼내기 위해 intValue() 메소드 사용
 	}
 	
 	//==>jdk1.5의 경우
 	//==>아래의 코딩에서 generic/autoboxing/auto unboxing 적용 이해
 	public void addArrayList15(int intValue){
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-		arrayList.add(intValue);      //==>autoboxing
-		int i = arrayList.get(0); 		//==>autounboxing
+		arrayList.add(intValue);      //==>autoboxing (자동 랩핑)
+		int i = arrayList.get(0); 	  //==>autounboxing (자동 언랩핑)
 		System.out.println(i);
 	}
 	

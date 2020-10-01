@@ -1,6 +1,6 @@
 package jp01.part07;
 
-// VectorTest03 을 List로 객체 생성하는 걸로 바꿔 보기 !
+// VectorTest03 을 List 인터페이스 이용해서 객체 생성하게끔 바꿔 보기 !
 
 import java.util.*;
 
@@ -24,7 +24,7 @@ public class VectorTest04 {
 		//Vector 저장된 값을 출력
 		for (int i = 0; i < vector.size(); i++) {
 			//Generic 사용으로 명시적 형변환 불필요
-			String s = vector.elementAt(i); //list에 없고 VECTOR만 있는 구체적인 메소드
+			String s = vector.get(i); //List 인터페이스의 get 메소드 오버라이딩
 			System.out.print(s);
 //			System.out.print(vector.elementAt(i));
 		}
@@ -39,21 +39,21 @@ public class VectorTest04 {
 		}
 		
 		System.out.println("\n ==> API 확인");
-		vector.insertElementAt("4.길", 1); //list에 없고 VECTOR만 있는 구체적인 메소드
+		vector.add(1, "4.길"); //List 인터페이스의 add 메소드 오버라이딩
 		for(int i = 0; i < vector.size(); i++) {
-			System.out.print(vector.elementAt(i)); //list에 없고 VECTOR만 있는 구체적인 메소드
+			System.out.print(vector.get(i)); //List 인터페이스의 get 메소드 오버라이딩
 		}
 		
 		System.out.println("\n ==> API 확인");
-		vector.setElementAt("5. 홍길순", 3); //list에 없고 VECTOR만 있는 구체적인 메소드
+		vector.set(3, "5. 홍길순"); //List 인터페이스의 set 메소드 오버라이딩
 		for(int i = 0; i < vector.size(); i++) {
-			System.out.print(vector.elementAt(i)); //list에 없고 VECTOR만 있는 구체적인 메소드
+			System.out.print(vector.get(i)); //List 인터페이스의 get 메소드 오버라이딩
 		}
 		
 		System.out.println("\n ==> API 확인");
-		vector.removeElementAt(3); //list에 없고 VECTOR만 있는 구체적인 메소드
+		vector.remove(3); //List 인터페이스의 remove 메소드 오버라이딩
 		for(int i = 0; i < vector.size(); i++) {
-			System.out.print(vector.elementAt(i)); //list에 없고 VECTOR만 있는 구체적인 메소드
+			System.out.print(vector.get(i)); //List 인터페이스의 get 메소드 오버라이딩
 		}
 	}
 }

@@ -50,7 +50,7 @@ public class ArrayListTest03 {
 		}
 		
 		System.out.println("\n ==> API 확인");
-		arrayList.remove(3);
+		arrayList.remove(2);
 		for(int i = 0; i < arrayList.size(); i++) {
 			System.out.print(arrayList.get(i));
 		}

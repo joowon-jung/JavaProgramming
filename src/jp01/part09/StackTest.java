@@ -1,7 +1,6 @@
 package jp01.part09;
 
 import java.util.Stack;
-import java.util.*;
 
 /*
  * :: java.util.Stack (Last In First Out)

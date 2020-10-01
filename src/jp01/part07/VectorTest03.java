@@ -27,9 +27,9 @@ public class VectorTest03 {
 		//Vector 저장된 값을 출력
 		for (int i = 0; i < vector.size(); i++) {
 			//Generic 사용으로 명시적 형변환 불필요
-			String s = vector.elementAt(i);
-			System.out.print(s);
-//			System.out.print(vector.elementAt(i));
+//			String s = vector.elementAt(i);
+//			System.out.print(s);
+			System.out.print(vector.elementAt(i));
 		}
 		
 		System.out.println("\n JDK 1.5 추가기능 :: Generic, Enhanced For Loop 사용");
@@ -42,19 +42,19 @@ public class VectorTest03 {
 		}
 		
 		System.out.println("\n ==> API 확인");
-		vector.insertElementAt("4.길", 1);
+		vector.insertElementAt("4.길", 1); //insertElementAt :n번째 index에 집어넣고 한칸씩 뒤로 미룸
 		for(int i = 0; i < vector.size(); i++) {
 			System.out.print(vector.elementAt(i));
 		}
 		
 		System.out.println("\n ==> API 확인");
-		vector.setElementAt("5. 홍길순", 3);
+		vector.setElementAt("5. 홍길순", 3); //setElementAt : n번째 index에 그냥 집어넣어버림
 		for(int i = 0; i < vector.size(); i++) {
 			System.out.print(vector.elementAt(i));
 		}
 		
 		System.out.println("\n ==> API 확인");
-		vector.removeElementAt(3);
+		vector.removeElementAt(2); //removeElementAt : n번째 index를 삭제하고 한칸씩 앞으로 땡김
 		for(int i = 0; i < vector.size(); i++) {
 			System.out.print(vector.elementAt(i));
 		}

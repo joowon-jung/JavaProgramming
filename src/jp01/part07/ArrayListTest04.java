@@ -1,6 +1,6 @@
 package jp01.part07;
 
-// ArrayListTest03 을 List로 객체 생성하는 걸로 바꿔 보기 !
+// ArrayListTest03 을 List 인터페이스 이용해서 객체 생성하게끔 바꿔 보기 !
 
 import java.util.*;
 
@@ -10,11 +10,11 @@ public class ArrayListTest04 {
 	public static void main(String[] args) {
 		
 		//ArrayList 생성시 관리(저장, 추출)될 객체의 DataType 선언
-		List<String> arrayList = new ArrayList<String>(10); // List <String> arrayList = new ArrayList<String>(10); 가능!
+		List<String> arrayList = new ArrayList<String>(10);
 		
 		// add(E obj) : E를 인자로 받는다는 의미는 ? :: Generic 사용으로 묵시적 형변환 불필요
 		String s1 = new String("1.홍");
-		arrayList.add(s1); // list 안의 메소드가 오버라이딩 된 것
+		arrayList.add(s1); // List로 선언했는데 오류가 안 남 -> list 안의 메소드가 오버라이딩 된 것
 		arrayList.add(new String("2.길"));
 		arrayList.add("3. 님 안녕하세요");
 		
