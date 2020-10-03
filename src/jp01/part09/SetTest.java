@@ -16,7 +16,8 @@ public class SetTest {
 		Set<String> hs = new HashSet<String> ();
 		
 		String str = new String("A");
-		boolean isAddOk = hs.add(str);
+		boolean isAddOk = hs.add(str); // boolean add(E e)
+									   // 객체가 저장되면 true, 중복되있는 객체가 있어 저장되지 않으면 false
 		System.out.println("저장유무 : " + isAddOk);
 		
 		isAddOk = hs.add("b");
@@ -25,13 +26,13 @@ public class SetTest {
 		isAddOk = hs.add("B");
 		System.out.println("저장유무 : " + isAddOk);
 		
-		isAddOk = hs.add("B"); // set은 중복 불가
-		System.out.println("저장유무 : " + isAddOk);
+		isAddOk = hs.add("B"); // B가 이미 저장되어 있음. Set은 중복 불가!
+		System.out.println("저장유무 : " + isAddOk); // false
 		
-		System.out.println("저장된 data 갯수 : " + hs.size());
-		if (hs.contains("b")) {
+		System.out.println("저장된 data 갯수 : " + hs.size()); // int size() : 저장되어있는 객체 수 리턴
+		if (hs.contains("b")) { // boolean contains(Object o) : 주어진 객체가 저장되어있는지 여부
 			System.out.println("저장된 data b 를 삭제함.");
-			hs.remove("b");
+			hs.remove("b"); // boolean remove(Object o) : 주어진 객체 삭제
 		}
 		System.out.println("저장된 data 갯수 : " + hs.size());
 	}

@@ -14,18 +14,19 @@ public class MapTest {
 	public static void main(String[] args) {
 		
 		Map <String, String> map = new Hashtable <String, String> ();
+		// Map <key, value> 형태로 데이터 관리!
 		
 		String key = new String("홍길동");
 		String value = new String("의적");
-		map.put(key, value);
+		map.put(key, value); // put() : 주어진 key로 value를 저장
 		
 		map.put("이순신", "수군 대장군");
 		map.put("주몽", "고구려시조");
 		                                           
-		String value01 = map.get("주몽");
+		String value01 = map.get("주몽"); // get() : 주어진 key가 있는 value를 리턴
 		System.out.println("주몽 설명 : " + value01);
 		
-		if (map.containsKey("이순신")) {
+		if (map.containsKey("이순신")) { // boolean containsKey(Object key) : 주어진 key가 있는지 여부
 			System.out.println("이순신을 key로 갖는 value가 있으며 value : " + map.get("이순신"));
 		}
 		
