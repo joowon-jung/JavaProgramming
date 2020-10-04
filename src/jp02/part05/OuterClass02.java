@@ -1,7 +1,6 @@
 package jp02.part05;
 
 /*
- * 	
  * 	<< Inner local Class 의 이해 >>
  *  1. inner localClass 는 method 와 내부의 local variable 과 같은 level
  *  2. 컴파일 후 innerClasss는 어떤 형태의 class가 되는 지 확인할 것 (~~~ $1~~~.class)
@@ -34,8 +33,8 @@ public class OuterClass02 {
 				System.out.println("::"+this.getClass().getName()+" start.. ");
 				//innerClass에서 OuterClass로 접근하기 
 				System.out.println(localVariable);
-				System.out.println(outer);
-				System.out.println(inner);
+				System.out.println(outer); //OuterClass02.this.outer 가능
+				System.out.println(inner); //this.inner 가능
 				System.out.println("::"+this.getClass().getName()+" end.. ");
 			}
 		}
@@ -50,6 +49,8 @@ public class OuterClass02 {
 	
 	///main method
 	public static void main(String[] args) {
+		// OuterClass01 oc = new OuterClass01();
+		// oc.outerMethod();
 		new OuterClass02().outerMethod();
 	}
 }

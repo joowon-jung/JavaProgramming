@@ -32,7 +32,7 @@ public class ExceptionTest04 {
 		System.out.println("1. ==> sum 끝");
 	}
 
-	// JVM에서 던진 ArithmeticException을 다시 자신을 호출한 곳으로 던진(?, 위임) 다
+	// JVM에서 던진 ArithmeticException을 다시 자신을 호출한 곳으로 던진(위임) 다
 	public void avg(int z) throws ArithmeticException {
 		System.out.println("2. ==> avg 시작");
 		avg = sum / z; // z = 0 인 경우 불능
@@ -43,19 +43,30 @@ public class ExceptionTest04 {
 	/// main method
 	public static void main(String[] args) {
 
-		int i = Integer.parseInt(args[0]);
-		int j = Integer.parseInt(args[1]);
-		int k = Integer.parseInt(args[2]);
+		int i = Integer.parseInt(args[0]); //10
+		int j = Integer.parseInt(args[1]); //20
+		int k = Integer.parseInt(args[2]); //0
 
 		ExceptionTest04 et = new ExceptionTest04();
 		et.sum(i, j);
 
 		// JVM 에서 던지 건, program 에서 throws 하던 Exception(예외처리)의 해결책은 try - catch
+		
+		// ExceptionTest02 에서는 메소드 내의 문제 발생한 곳에서 try-catch 해줬음 
+		// 04 : 메소드에서 발생한 예외를 메소드를 호출한 곳으로 던지고(throws) 
+		// 예외를 던진 곳에서 try - catch 해서 문제 해결!
 		try {
 			et.avg(k);
-		} catch (ArithmeticException e) { // 현재라인을 주석처리하고 아래를 주석을 풀고 실행하면..
-			// }catch(Exception e){ // Exception e = new ArithmeticException() 은 가능한가? 가능
-			                                      // 아버지 대신 내가 갈 수 있음. is - a 관계
+		} catch (ArithmeticException e) { // 현재라인을 주석처리하고 아래 주석을 풀고 실행해보기
+			// }catch(RuntimeException e){ 
+			// }catch(Exception e){ 
+			// }catch(Throwable e){ 
+			// 다 가능! ArithmeticException 의 상위클래스들 이기 때문에
+			// ==> catch 안에는 Throwable을 포함한 Throwable 하위 클래스들 모두 올 수 있음!
+			
+			// Exception e = new ArithmeticException() 가능?
+			// 가능! 아버지 대신 내가 갈 수 있음. is - a 관계
+			
 			System.out.println("1. >> ==========================");
 			System.out.println("et.avg(k)에서 Exception 이 발생한 모양");
 			System.out.println("2. >> ==========================");
