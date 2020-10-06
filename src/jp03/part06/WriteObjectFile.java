@@ -5,7 +5,7 @@ import java.io.*;
 /*
  * 
  * 		ObjectOutputStream을 이용 회원정보를 갖는 UserVO instance 를
- *  	(객체는 상태를 갖는다 / 상태정보를) persistence data(File)로 저	
+ *  	(객체는 상태를 갖는다 / 상태정보를) persistence data(File)로 저장
  */
 public class WriteObjectFile {
 	

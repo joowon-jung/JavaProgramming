@@ -12,7 +12,7 @@ public class FileInfo {
 		
 		String name = "";
 		//==> NullString ==> String s = new String()과 같은 의미
-		//==> String s = null과 구분하자!
+		//==> String s = null과 구분하자! s.어쩌고 하면 nullPointerException 발생
 		
 		// 파일 이름을 받아들임
 		try {
