@@ -8,6 +8,9 @@ import java.io.*;
  	객체를 입출력자원, network 자원으로 이동되기 위해서는
  	 Serializable 이라는 marker interface 를 구현해야 한다. ==> 객체직렬화...
  */
+
+// 회원이 많아질수록 다뤄야 할 데이터가 기하급수적으로 늘어난다!
+// 그러므로 클래스로 데이터를 다루고, 파일 스트림으로 입출력 
 public class UserVO implements Serializable {
 	
 	///Field
