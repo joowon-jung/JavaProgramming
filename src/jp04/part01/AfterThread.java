@@ -29,7 +29,9 @@ public class  AfterThread extends Thread{
 
 		AfterThread bt1 = new AfterThread("1번째");
 		AfterThread bt2 = new AfterThread("2번째");
-        //==>start() method 는 어디에 있는가.???
+        //==>start() method 는 어디에 있는가.??? => java.lang 안에 있음
+		//import 하지 않았는데도 start() 메소드를 찾은 것을 보고 유추할 수 있다!
+		//java.lang은 import 문 적지 않아도 자동 import 됨
         bt1.start();
 		bt2.start();
 		
