@@ -22,8 +22,8 @@ public class TheaterReservationSystem{
   //==> Ticket 의 유무를 확인 하고 있으면 true, 없으면 Exception 을 던진는 예외로 처리
   //==> synchronized : thread 가 수행중이면 다를 thread 접근 불가
   //==> 이레 각각 주석처리해가며 결과를 확인하여 synchronized modifier 이해
-  public boolean getTicket(ReservationShop rs) throws Exception{
-  //public synchronized boolean  getTicket(ReservationShop rs) throws Exception{
+  //public boolean getTicket(ReservationShop rs) throws Exception{
+  public synchronized boolean  getTicket(ReservationShop rs) throws Exception{
 
 	//예매소 왁인
 	System.out.println

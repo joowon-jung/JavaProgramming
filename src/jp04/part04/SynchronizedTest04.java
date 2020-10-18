@@ -2,63 +2,70 @@ package jp04.part04;
 
 /*
  * 	FileName : SynchronizedTest04.java
- */
-public class SynchronizedTest04 implements Runnable{
 	
-	///Field
+	t1 키를 가지고 => 실행 
+
+	t2 키가 없는 상태 => synchronized pool 로 이동 => 0.1초 타임이벤트 발생 
+	키를 놓는 이벤트 (t1 스레드가 끝나면) => t2 키 받음 => 계속 키 들고 무한루프 (DEAD LOCK)
+ */
+public class SynchronizedTest04 implements Runnable {
+
+	/// Field
 	private int num;
 	private String name;
-    private boolean check = true;
+	private boolean check = true;
 
-     ///Constructor
-    public SynchronizedTest04(){
-    }
-    public SynchronizedTest04(String name){
-		this.name=name;
+	/// Constructor
+	public SynchronizedTest04() {
 	}
-    
-    //method
-    //method  동기화 시킨경우
-	public synchronized void increase(){
-		
+
+	public SynchronizedTest04(String name) {
+		this.name = name;
+	}
+
+	// method
+	// method 동기화 시킨경우
+	public synchronized void increase() {
+
 		System.out.println("여기는 동기화된 Increase()");
 
-        for ( ; ; ){
-			System.out.print(Thread.currentThread().getName());
-			System.out.println(name+"님의  현재	예금액은 : "+num+"원");
-			
-			num++;
-			
-			try{
-				Thread.sleep(100);
-			}catch(Exception e){}
+		for (;;) { // while(true) 무한루프
+			System.out.print(Thread.currentThread().getName()); // 현재 run 상태에 있는 current 스레드의 이름을 출력
+			System.out.println(name + "님의  현재	예금액은 : " + num + "원");
 
-            if( check ){
-                check=false;
-                break;
-            }
+			num++;
+
+			try {
+				Thread.sleep(100);
+			} catch (Exception e) {
+			}
+
+			if (check) {
+				check = false;
+				break;
+			}
 		}
 	}
-	
-    //thread run method
-	public void run(){
+
+	// thread run method
+	public void run() {
 		increase();
 	}
 
-    //main method
+	// main method
 	public static void main(String[] args) {
-		
+
 		SynchronizedTest04 bb = new SynchronizedTest04("홍길동");
-		
+
 		Thread t1 = new Thread(bb);
 		Thread t2 = new Thread(bb);
-		
+
 		t1.start();
 		t2.start();
-		
-		//Thread t3 = new Thread(bb);
-		//t3.start()
-		
-	}//end of main
-	
-}//end of class
+
+		// Thread t3 = new Thread(bb);
+		// t3.start()
+
+	}// end of main
+
+}// end of class
